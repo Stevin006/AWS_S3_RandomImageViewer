@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "s3ImgGal/1.0.0": {
+        "runtime": {
+          "s3ImgGal.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "s3ImgGal/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

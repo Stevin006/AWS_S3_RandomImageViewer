@@ -1,0 +1,35 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Main Viewer";
+}
+
+<div class="text-center">
+    <Script></Script>
+    <h1 class="display-4">AWS Cloud Image Viewer</h1>
+    <img id="randomImage" src="~/Images/outreach.png" style="max-width: 100%; height: auto;" alt="Outreach Image" />
+
+</div>
+
+@section Scripts {
+    <script>
+        async function loadRandomImage() {
+        
+
+        function getRandomIntInclusive(min, max) {
+            min = Math.ceil(min);   // Ensure min is an integer by rounding up
+            max = Math.floor(max);  // Ensure max is an integer by rounding down
+            return Math.floor(Math.random() * (max - min + 1)) + min; // The maximum is inclusive and the minimum is inclusive
+        }
+
+        randomNum = getRandomIntInclusive(1, 6)
+        console.log(randomNum)
+        try {
+        document.getElementById('randomImage').src = "https://image-gallery-demostev.s3.us-east-2.amazonaws.com/" + randomNum;
+        } catch (error) {
+        console.error('Error fetching image:', error);
+        }
+        }
+        window.onload = loadRandomImage;
+    </script>
+}
